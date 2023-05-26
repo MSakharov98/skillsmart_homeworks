@@ -6,7 +6,7 @@
 В качестве класса, предположительно, разработчики могут использовать публикацию в соцмедиа. 
 '''
 
-class Post_in_VKontakte():
+class Post_in_VKontakte:
     likes = 0 #количество лайков
     reposts = 0 # количество репостов
     comments = 0 #количество комментариев
@@ -31,7 +31,7 @@ post_about_roads.er = (post_about_roads.likes + post_about_roads.reposts
 со своими питательными характеристиками.
 '''
 
-class dish():
+class dish:
     proteins = 0
     fats = 0 
     carbohydrates = 0
@@ -54,7 +54,7 @@ cutlet.calories = 123
 '''
 
 # Характеристики компьютера
-class Computer():
+class Computer:
     model = 'MacBook Pro'
     processor = 'M1 Pro'
     memory = 0
@@ -64,7 +64,7 @@ class Computer():
     price = 0
 
 #Пусть даже используется ноутбук, к нему можно подключить монитор
-class Monitor():
+class Monitor:
     size = 0
     panel_type = 'IPS'
     resolution = '1920x1080'
@@ -73,7 +73,7 @@ class Monitor():
     price = 0
 
 # Для удобства и повышения скорости печати подключим клавиатуру
-class Keyboard():
+class Keyboard:
     keyboard_type = 'mechanical'
     layout = 'RU'
     backlighting = True
