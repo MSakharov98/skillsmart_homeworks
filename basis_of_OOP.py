@@ -105,4 +105,20 @@ class Apple(Fruit):
     def make_cider(self):
         print(f'Making cider from {self._variety} apples')
         
-    
+#  Создадим объект класса Apple
+apple = Apple('Apple', 'Red', 'Granny Smith')
+
+# Чистим яблоко
+apple.peel()
+
+# Кушаем яблоко
+apple.eat()
+
+# Создадим еще один объект класса Apple и сделаем из него сидр
+apple2 = Apple('Apple', 'Red', 'Champion')
+
+# Почистим и второе яблоко 
+apple2.peel()
+
+# Сделаем сидр 
+apple2.make_cider()
