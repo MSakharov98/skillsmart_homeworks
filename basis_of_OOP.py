@@ -79,7 +79,8 @@ bicycle.pedal()
 # Оповещаем прохожих звонком о приближении
 bicycle.ring_bell()
 
-# Создадим класс Fruit
+# 2) Создадим класс Fruit
+
 # Фрукты можно будет почистить и съесть
 class Fruit:
     def __init__(self, name, color):
@@ -137,4 +138,14 @@ class Banana(Fruit):
     def blend(self):
         print(f'Blending a {self._length}-cm {self._color} banana smoothie')
 
+# Создадим объект класса Banana
+banana = Banana('Banana', 'Yellow', 12)
 
+# Почистим банан
+banana.peel()
+
+# Сделаем смузи
+banana.blend()
+
+# Съедим банан
+banana.eat()
