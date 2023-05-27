@@ -77,3 +77,17 @@ bicycle.pedal()
 # Оповещаем прохожих звонком о приближении
 bicycle.ring_bell()
 
+# Создадим класс Fruit
+# Фрукты можно будет почистить и съесть
+class Fruit:
+    def __init__(self, name, color):
+        self.name = name
+        self.color = color
+
+    def peel(self):
+        print(f'Peeling the {self.color} {self.name}')
+    
+    def eat(self):
+        print(f'Eating the {self.color} {self.name}')
+
+    
