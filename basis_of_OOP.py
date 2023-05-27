@@ -90,4 +90,17 @@ class Fruit:
     def eat(self):
         print(f'Eating the {self.color} {self.name}')
 
+# Создадим дочерний класс Apple
+# Яблоко можно будет запечь или сделать из него сидр
+class Apple(Fruit):
+    def __init__(self, name, color, variety):
+        super().__init__(name, color)
+        self.variety = variety # название сорта яблок
+    
+    def bake(self):
+        print(f'Baking an {self.color} {self.variety}')
+    
+    def make_cider(self):
+        print(f'Making cider from {self.variety} apples')
+        
     
