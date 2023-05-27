@@ -11,7 +11,7 @@ class Vehicle:
     def start_engine(self):
         print(f'The {self.brand} {self.model} engine is starting')
     
-# Создадим метод дозаправка автомобиля
+# Создадим метод дозаправки автомобиля
     def refuel(self, fuel_amount):
         self.fuel += fuel_amount
         print(f'Refueled the {self.brand} {self.model} with {fuel_amount} liters of fuel')
@@ -50,4 +50,18 @@ car.open_doors()
 
 # Ведем машину
 car.drive()
+
+# Создадим еще один дочерний класс Bicycle
+class Bicycle(Vehicle):
+    def __init__(self, brand, model, num_gears):
+        super().__init__(brand, model):
+        self.num_gears = num_gears
+
+# Создадим метод езды на велосипеде
+    def pedal(self):
+        print(f'Pedaling the {self.brand} {self.model}')
+
+# Создадим метод звонка для оповещения пешеходов
+    def ring_bell(self):
+        print(f'Ring the bell of the {self.brand} {self.model}')
 
