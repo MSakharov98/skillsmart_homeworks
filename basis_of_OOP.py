@@ -122,3 +122,19 @@ apple2.peel()
 
 # Сделаем сидр 
 apple2.make_cider()
+
+# Создадим класс Banana - также дочерний для Fruit
+class Banana(Fruit):
+    def __init__(self, _name, _color, length):
+        super().__init__(_name, _color)
+        self._length = length
+    
+# Банан можно так же почистить 
+    def peel(self):
+        print(f'Peeling a {self._length}-cm {self._name} banana')
+
+# Также банан можно превратить в пюре в блендере
+    def blend(self):
+        print(f'Blending a {self._length}-cm {self._color} banana smoothie')
+
+
