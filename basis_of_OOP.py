@@ -1,6 +1,6 @@
 # В задании реализуем две несложные иерархии классов на основе окружающих предметов
 
-# Создаем класс Vehicle
+# 1) Создаем класс Vehicle
 class Vehicle:
     def __init__(self, brand, model):
         self.brand = brand # марка 
@@ -54,8 +54,8 @@ car.drive()
 # Создадим еще один дочерний класс Bicycle
 class Bicycle(Vehicle):
     def __init__(self, brand, model, num_gears):
-        super().__init__(brand, model):
-        self.num_gears = num_gears
+        super().__init__(brand, model)
+        self.num_gears = num_gears # количество передач
 
 # Создадим метод езды на велосипеде
     def pedal(self):
@@ -64,4 +64,16 @@ class Bicycle(Vehicle):
 # Создадим метод звонка для оповещения пешеходов
     def ring_bell(self):
         print(f'Ring the bell of the {self.brand} {self.model}')
+
+# Создадим объект класса Bicycle
+bicycle = Bicycle('Giant', 'Defy', 18)
+
+# Начинаем движение на велосипеде "запускаем двигатель"
+bicycle.start_engine()
+
+# Едем, жмем на педали
+bicycle.pedal()
+
+# Оповещаем прохожих звонком о приближении
+bicycle.ring_bell()
 
