@@ -98,6 +98,42 @@ basket.add_fruit(apple2)
 
 basket.eat_all()
 
+# 4.2 Переопределение методов в иерархии родительского класса и двух дочерних
+
+# Создадим класс Animal
+
+class Animal:
+
+    # Пускай звери издают звуки
+    def make_sound(self):
+        print('Animal makes its sound!')
+
+# Далее создадим дочерний класс Dog
+
+class Dog(Animal):
+
+    # Собака гавкает
+    def make_sound(self):
+        print('Woof! Woof!')
+
+# Создадим еще один дочерний класс Cat
+
+class Cat(Animal):
+    # Кот мяукает
+    def make_sound(self):
+        print('Meow! Meow!')
+
+# Продемонстрируем работы классов
+animal = Animal()
+animal.make_sound()
+
+dog = Dog()
+dog.make_sound()
+
+cat = Cat()
+cat.make_sound()
+
+
 
 
 
