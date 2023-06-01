@@ -36,6 +36,11 @@ class Vehicle:
         for wheel in self.wheels:
             wheel.rotate()
 
+# Проверим работу новой композиции
+car = Vehicle()
+car.start()
+car.stop()
+
 # б) Далее преобразуем класс Fruit
 
 
