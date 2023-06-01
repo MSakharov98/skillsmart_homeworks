@@ -5,6 +5,7 @@
 # a) Для начала преобразуем класс Vehicle
 
 # Создадим класс Engine для управления двигателем
+
 class Engine:
     def start(self):
         print('Engine started')
@@ -13,35 +14,88 @@ class Engine:
         print('Engine stopped')
 
 # Далее создадим класс Wheel для управления колесами
+
 class Wheel:
     def rotate(self):
         print('Wheel is rotating')
 
 # Преобразуем класс Vehicle
+
 class Vehicle:
     # Добавим машине двигатель и четыре колеса
+
     def __init__(self):
-        self.engine = Engine()
-        self.wheels = [Wheel() for _ in range(4)]
+        self._engine = Engine()
+        self._wheels = [Wheel() for _ in range(4)]
 
     # Реализуем метод начала движения
+
     def start(self):
-        self.engine.start()
-        for wheel in self.wheels:
+        self._engine.start()
+        for wheel in self._wheels:
             wheel.rotate()
 
     # Реализуем метод остановки
+
     def stop(self):
-        self.engine.stop()
-        for wheel in self.wheels:
+        self._engine.stop()
+        for wheel in self._wheels:
             wheel.rotate()
 
 # Проверим работу новой композиции
+
 car = Vehicle()
 car.start()
+print('\n')
 car.stop()
+print('\n')
 
 # б) Далее преобразуем класс Fruit
+
+class Fruit:
+    def __init__(self, name, color):
+        self._name = name
+        self._color = color
+
+    def peel(self):
+        print(f'Peeling the {self._color} {self._name}')
+
+    def eat(self):
+        print(f'Eating the {self._color} {self._name}')
+
+# Фрукты можно положить в корзину
+
+class Basket:
+    def __init__(self):
+        self._fruits = []
+
+    # Складываем фрукты в корзину
+    def add_fruit(self, fruit):
+        self._fruits.append(fruit)
+
+    # Съедаем все фрукты
+    def eat_all(self):
+        for fruit in self._fruits:
+            fruit.peel()
+            fruit.eat()
+            print('\n')
+
+# Тестируем композицию Fruit
+
+apple = Fruit('Apple', 'Red')
+apple2 = Fruit('Apple', 'Green')
+
+# Создадим экземпляр класса Basket
+
+basket = Basket()
+basket.add_fruit(apple)
+basket.add_fruit(apple2)
+
+# И все съедаем
+
+basket.eat_all()
+
+
 
 
 
