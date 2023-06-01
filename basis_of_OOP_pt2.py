@@ -88,6 +88,9 @@ apple2 = Fruit('Apple', 'Green')
 # Создадим экземпляр класса Basket
 
 basket = Basket()
+
+# Добавляем туда наши фрукты
+
 basket.add_fruit(apple)
 basket.add_fruit(apple2)
 
