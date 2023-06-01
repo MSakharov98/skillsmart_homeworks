@@ -156,6 +156,47 @@ for animal in animals:
 переопределенного типа. Для Dog – 'Woof! Woof!', для Cat – 'Meow! Meow!'
 '''
 
+# Задание 4.3
+
+# Пример работы ad hoc полиморфизма
+
+# Наглядным примером ad hoc полиморфмизма может быть вычисление площади различных фигур
+
+# Создаем класс Rectangle
+class Rectangle:
+    # Для вычисления площади прямоугольника нам нужны его ширина и длина
+    def __init__(self, width, length):
+        self._width = width
+        self._length = length
+
+    # Задаем метод вычисления площади
+    def area(self):
+        return self._width * self._length
+
+# Далее создаем класс Circle
+class Circle:
+    # Для вычисления площади круга нужен радиус
+    def __init__(self, radius):
+        self._radius = radius
+
+    # Задаем метод вычисления площади
+    def area(self):
+        return 3.14 * self._radius * self._radius
+
+# Далее зададим общую функцию для расчета площади фигуры на плоскости
+# Она будет принимать параметр shape, определять форму фигуры и вычислять площадь
+def calculate_area(shape):
+    return shape.area()
+
+# Проверим работу ad hoc полиморфизма
+rectangle = Rectangle(3, 4)
+circle = Circle(4)
+
+area_of_rectangle = calculate_area(rectangle)
+print(area_of_rectangle)
+area_of_circle = calculate_area(circle)
+print(area_of_circle)
+
 
 
 
