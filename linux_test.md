@@ -1,7 +1,7 @@
 <h1>Тестирование программы в консоли Linux</h1>
 
 <h3>Скриншот с выводом программы в консоли Linux</h3>
-<img src='/Users/mikhailsaharov/Desktop/programming_homeworks/images/lection_10_programm.png'></img>
+<img src='images/lection_10_programm.png'></img>
 
 <p>На данном скриншоте представлен вывод программы из Лекции № 8</p>
 <p>Отмечу: вывод идентичен тому, что представлен в файле</p>
