@@ -3,12 +3,12 @@ import random
 # Импортировали модуль random для генерации случайных чисел  в строках файлов
 # Создаем 10 файлов и записываем туда по строкам случайные числа, разделенные символом перевода строки
 
-# for i in range(1, 11):
-#     file_name = str(i) + '.txt'
-#     with open(file_name, 'w') as file:
-#         for _ in range(3):
-#             number = random.randint(1, 100)
-#             file.write(str(number) + '\n')
+for i in range(1, 11):
+    file_name = str(i) + '.txt'
+    with open(file_name, 'w') as file:
+        for _ in range(3):
+            number = random.randint(1, 100)
+            file.write(str(number) + '\n')
 
 # 3.2
 # Напишем функцию, которая принимает два случайных числа от 1 до 10 включительно и путь к файлам
