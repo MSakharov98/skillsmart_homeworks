@@ -1,9 +1,32 @@
-from Pillow import Image, ImageDraw, ImageFont
+from PIL import Image, ImageDraw
 import glob
 import os
 
+# 3.1
 def convert_images(source_extension, target_extension):
+    # Находим все файлы с расширением source_extension
+    files = glob.glob(f'*.{source_extension}')
 
+    for file in files:
+        # Открываем изображение
+        image = Image.open(file)
+
+        # Создаем новое имя файла с заменой расширения
+        new_filename = os.path.splitext(file)[0] + f'.{target_extension}'
+
+        # Конвертируем и сохраняем изображение в целевом формате
+        image.save(new_filename, target_extension)
+
+        print(f"Converted {file} to {new_filename}")
+
+# Пример использования функции
+source_ext = 'jpg'
+target_ext = 'png'
+
+convert_images(source_ext, target_ext)
+
+# 3.2 Дополняем функцию
+def convert_images(source_extension, target_extension):
     # Находим все файлы с расширением source_extension
     files = glob.glob(f'*.{source_extension}')
 
@@ -46,3 +69,6 @@ source_ext = 'jpg'
 target_ext = 'png'
 
 convert_images(source_ext, target_ext)
+
+
+
