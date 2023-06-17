@@ -64,13 +64,16 @@
 #         print("Directory does not exist.")
 #         return False
 
-
 import os
 import shutil
 
-def get_files_with_extension(directory_path, extension, include_subdirectories):
-    file_list = []
-    subdirectory_file_list = []
+import os
+import shutil
+from typing import List, Tuple
+
+def get_files_with_extension(directory_path: str, extension: str, include_subdirectories: bool) -> Tuple[List[str], List[str]]:
+    file_list: List[str] = []
+    subdirectory_file_list: List[str] = []
 
     for root, directories, files in os.walk(directory_path):
         for file in files:
@@ -80,35 +83,23 @@ def get_files_with_extension(directory_path, extension, include_subdirectories):
                 else:
                     subdirectory_file_list.append(os.path.join(root, file))
 
-    return [file_list, subdirectory_file_list]
+    return (file_list, subdirectory_file_list)
 
 
-def delete_directory(directory_path):
-    if not os.path.exists(directory_path):
+def delete_directory(directory_path: str) -> bool:
+    file_list: Tuple[List[str], List[str]] = get_files_with_extension("/programming_homeworks/lection_14", ".txt", True)
+
+    if not file_list[0]:
         return False
 
-    file_list = get_files_with_extension(directory_path, extension, include_subdirectories)
-
-    files_to_remove = [file_path for file_path in file_list if os.path.isfile(file_path)]
-    directories_to_remove = [file_path for file_path in file_list if not os.path.isfile(file_path)]
-
-    for file_path in files_to_remove:
-        os.remove(file_path)
-
-    for directory_path in directories_to_remove:
-        shutil.rmtree(directory_path)
+    for file_path in file_list[0]:
+        if os.path.isfile(file_path):
+            os.remove(file_path)
+        else:
+            shutil.rmtree(file_path)
 
     return True
 
-
-directory_path = "path/to/directory"
-extension = ".txt"
-include_subdirectories = True
-
-result = get_files_with_extension(directory_path, extension, include_subdirectories)
-print(result)
-
-delete_directory(directory_path)
 
 
 
