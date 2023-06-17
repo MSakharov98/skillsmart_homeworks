@@ -64,9 +64,11 @@
 #         print("Directory does not exist.")
 #         return False
 
+
 import os
 import shutil
 from typing import List, Tuple
+import unittest
 
 def get_files_with_extension(directory_path: str, extension: str, include_subdirectories: bool) -> Tuple[List[str], List[str]]:
     file_list: List[str] = []
@@ -80,11 +82,13 @@ def get_files_with_extension(directory_path: str, extension: str, include_subdir
                 else:
                     subdirectory_file_list.append(os.path.join(root, file))
 
+    file_list.sort()  # Сортировка путей к файлам в алфавитном порядке
+    subdirectory_file_list.sort()  # Сортировка путей к файлам в подкаталогах в алфавитном порядке
+
     return file_list, subdirectory_file_list
 
-
 def delete_directory(directory_path: str) -> bool:
-    file_list: Tuple[List[str], List[str]] = get_files_with_extension("/programming_homeworks/lection_14", ".txt", True)
+    file_list: Tuple[List[str], List[str]] = get_files_with_extension(directory_path, ".txt", True)
 
     if not file_list[0]:
         return False
@@ -95,7 +99,47 @@ def delete_directory(directory_path: str) -> bool:
         else:
             shutil.rmtree(file_path)
 
+    # Дополнительно удаляем сам каталог
+    shutil.rmtree(directory_path)
+
     return True
+
+# Тесты
+
+
+class FilesTestCase(unittest.TestCase):
+    def setUp(self):
+        # Создаем тестовый каталог
+        os.makedirs("/tmp/test_dir")
+        os.makedirs("/tmp/test_dir/subdir")
+        with open("/tmp/test_dir/file1.txt", "w"):
+            pass
+        with open("/tmp/test_dir/file2.txt", "w"):
+            pass
+        with open("/tmp/test_dir/subdir/file3.txt", "w"):
+            pass
+        with open("/tmp/test_dir/subdir/file4.txt", "w"):
+            pass
+
+    def tearDown(self):
+        # Проверяем существование каталога перед удалением
+        if os.path.exists("/tmp/test_dir"):
+            # Удаляем тестовый каталог
+            shutil.rmtree("/tmp/test_dir")
+
+    def test_get_files_with_extension(self):
+        result = get_files_with_extension("/tmp/test_dir", ".txt", True)
+        expected_result = (['/tmp/test_dir/file1.txt', '/tmp/test_dir/file2.txt', '/tmp/test_dir/subdir/file3.txt', '/tmp/test_dir/subdir/file4.txt'], [])
+        self.assertEqual(result, expected_result)
+
+    def test_delete_directory(self):
+        success = delete_directory("/tmp/test_dir")
+        self.assertTrue(success)  # Проверяем успешное удаление каталога
+        self.assertFalse(os.path.exists("/tmp/test_dir"))  # Проверяем, что каталог был удален
+
+if __name__ == '__main__':
+    unittest.main()
+
 
 
 
