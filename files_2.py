@@ -63,10 +63,7 @@
 #     else:
 #         print("Directory does not exist.")
 #         return False
-#
-# # Корректировки, вписал все в одну функцию для консолидации кода в одном месте
-import os
-import shutil
+
 
 import os
 import shutil
