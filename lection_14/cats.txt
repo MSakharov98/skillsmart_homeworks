@@ -1,3 +1,0 @@
-Barsik 2 1
-Kuzya 3 2
-Chernysh 4 3
