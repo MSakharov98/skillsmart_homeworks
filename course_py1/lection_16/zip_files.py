@@ -4,7 +4,7 @@ import os
 def create_archive(filename, extension):
     try:
         with zipfile.ZipFile(filename, 'w') as zipf:
-            for file in os.listdir('..'):
+            for file in os.listdir('../..'):
                 if file.endswith(extension):
                     zipf.write(file)
         return True
