@@ -47,3 +47,22 @@ result = find_repeated_values(numbers, repeats)
 
 # Выводим результат
 print(f"Значения, повторяющиеся не менее {repeats} раз: {result}")
+
+
+# Внесение корректировок и превращение кода в один цикл
+def find_repeated_values(numbers, repeats):
+    count_dict = {}  # Словарь для подсчета повторений значений
+    repeated_values = []  # Список для хранения повторяющихся значений
+
+    for number in numbers:
+        if number in count_dict:
+            count_dict[number] += 1
+        else:
+            count_dict[number] = 1
+
+        if count_dict[number] >= repeats and number not in repeated_values:
+            repeated_values.append(number)
+
+    return repeated_values
+
+
