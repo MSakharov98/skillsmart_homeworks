@@ -64,29 +64,6 @@
 #         print("Directory does not exist.")
 #         return False
 
-
-import os
-import shutil
-from typing import List, Tuple
-import unittest
-
-def get_files_with_extension(directory_path: str, extension: str, include_subdirectories: bool) -> Tuple[List[str], List[str]]:
-    file_list: List[str] = []
-    subdirectory_file_list: List[str] = []
-
-    for root, directories, files in os.walk(directory_path):
-        for file in files:
-            if file.endswith(extension):
-                if include_subdirectories or root == directory_path:
-                    file_list.append(os.path.join(root, file))
-                else:
-                    subdirectory_file_list.append(os.path.join(root, file))
-
-    file_list.sort()  # Сортировка путей к файлам в алфавитном порядке
-    subdirectory_file_list.sort()  # Сортировка путей к файлам в подкаталогах в алфавитном порядке
-
-    return file_list, subdirectory_file_list
-
 import os
 import shutil
 from typing import List, Tuple
