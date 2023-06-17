@@ -41,5 +41,28 @@ def delete_directory(directory_path):
         print(f"Failed to delete directory: {e}")
         return False
 
+# Внесение корректировок. Не используется конструкция try...except, добавлена собственная функция
+# по созданию каталогов и подкаталогов
+def delete_directory(directory_path):
+    def get_file_list(directory_path):
+        file_list = []
+        for root, directories, files in os.walk(directory_path):
+            for file in files:
+                file_path = os.path.join(root, file)
+                file_list.append(file_path)
+        return file_list
+
+    if os.path.exists(directory_path):
+        file_list = get_file_list(directory_path)
+        for file_path in file_list:
+            if os.path.isfile(file_path):
+                os.remove(file_path)
+            else:
+                shutil.rmtree(file_path)
+        return True
+    else:
+        print("Directory does not exist.")
+        return False
+
 
 
