@@ -7,7 +7,7 @@ from files_2 import get_files_with_extension, delete_directory
 class FilesTestCase(unittest.TestCase):
     def setUp(self):
         # Создаем тестовый каталог
-        self.test_dir = "tmp/test_dir"
+        self.test_dir = "test_dir"
         self.subdir = "subdir"
         os.makedirs(self.test_dir)
         os.makedirs(os.path.join(self.test_dir, self.subdir))
@@ -28,7 +28,12 @@ class FilesTestCase(unittest.TestCase):
 
     def test_get_files_with_extension(self):
         result = get_files_with_extension(self.test_dir, ".txt", True)
-        expected_result = (['tmp/test_dir/file1.txt', 'tmp/test_dir/file2.txt', 'tmp/test_dir/subdir/file3.txt', 'tmp/test_dir/subdir/file4.txt'], [])
+        expected_result = ([
+            os.path.join(self.test_dir, "file1.txt"),
+            os.path.join(self.test_dir, "file2.txt"),
+            os.path.join(self.test_dir, self.subdir, "file3.txt"),
+            os.path.join(self.test_dir, self.subdir, "file4.txt")
+        ], [])
         self.assertEqual(result, expected_result)
 
     def test_delete_directory(self):
@@ -42,6 +47,3 @@ class FilesTestCase(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
-
-
-
