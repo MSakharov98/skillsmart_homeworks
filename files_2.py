@@ -68,50 +68,46 @@
 import os
 import shutil
 
-def process_directory(directory_path, extension, include_subdirectories):
-    def get_file_list(directory_path):
-        file_list = []
-        for root, directories, files in os.walk(directory_path):
-            for file in files:
-                file_path = os.path.join(root, file)
-                file_list.append(file_path)
-        return file_list
+import os
+import shutil
 
-    def get_files_with_extension(directory_path, extension, include_subdirectories):
-        file_list = []
-        subdirectory_file_list = []
+def get_files_with_extension(directory_path, extension, include_subdirectories):
+    file_list = []
+    subdirectory_file_list = []
 
-        for root, directories, files in os.walk(directory_path):
-            for file in files:
-                if file.endswith(extension):
-                    if include_subdirectories or root == directory_path:
-                        file_list.append(os.path.join(root, file))
-                    else:
-                        subdirectory_file_list.append(os.path.join(root, file))
-
-        return [file_list, subdirectory_file_list]
-
-    def delete_directory(directory_path):
-        if os.path.exists(directory_path):
-            file_list = get_file_list(directory_path)
-            for file_path in file_list:
-                if os.path.isfile(file_path):
-                    os.remove(file_path)
+    for root, directories, files in os.walk(directory_path):
+        for file in files:
+            if file.endswith(extension):
+                if include_subdirectories or root == directory_path:
+                    file_list.append(os.path.join(root, file))
                 else:
-                    shutil.rmtree(file_path)
-            return True
-        else:
-            print("Directory does not exist.")
-            return False
+                    subdirectory_file_list.append(os.path.join(root, file))
 
-    result = get_files_with_extension(directory_path, extension, include_subdirectories)
-    print(result)
+    return [file_list, subdirectory_file_list]
 
-    delete_directory(directory_path)
 
-directory = '/Users/mikhailsaharov/Desktop/programming_homeworks/lection_14'
-extension = '.txt'
-include_subdirs = True
+def delete_directory(directory_path):
+    if os.path.exists(directory_path):
+        file_list = get_files_with_extension(directory_path, extension, include_subdirectories)
+        for file_path in file_list:
+            if os.path.isfile(file_path):
+                os.remove(file_path)
+            else:
+                shutil.rmtree(file_path)
+        return True
+    else:
+        print("Directory does not exist")
+        return False
 
-process_directory(directory, extension, include_subdirs)
+
+directory_path = "path/to/directory"
+extension = ".txt"
+include_subdirectories = True
+
+result = get_files_with_extension(directory_path, extension, include_subdirectories)
+print(result)
+
+delete_directory(directory_path)
+
+
 
