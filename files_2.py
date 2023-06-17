@@ -66,9 +66,6 @@
 
 import os
 import shutil
-
-import os
-import shutil
 from typing import List, Tuple
 
 def get_files_with_extension(directory_path: str, extension: str, include_subdirectories: bool) -> Tuple[List[str], List[str]]:
