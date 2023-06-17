@@ -84,17 +84,21 @@ def get_files_with_extension(directory_path, extension, include_subdirectories):
 
 
 def delete_directory(directory_path):
-    if os.path.exists(directory_path):
-        file_list = get_files_with_extension(directory_path, extension, include_subdirectories)
-        for file_path in file_list:
-            if os.path.isfile(file_path):
-                os.remove(file_path)
-            else:
-                shutil.rmtree(file_path)
-        return True
-    else:
-        print("Directory does not exist")
+    if not os.path.exists(directory_path):
         return False
+
+    file_list = get_files_with_extension(directory_path, extension, include_subdirectories)
+
+    files_to_remove = [file_path for file_path in file_list if os.path.isfile(file_path)]
+    directories_to_remove = [file_path for file_path in file_list if not os.path.isfile(file_path)]
+
+    for file_path in files_to_remove:
+        os.remove(file_path)
+
+    for directory_path in directories_to_remove:
+        shutil.rmtree(directory_path)
+
+    return True
 
 
 directory_path = "path/to/directory"
