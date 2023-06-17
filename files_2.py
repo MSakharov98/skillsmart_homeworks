@@ -83,7 +83,7 @@ def get_files_with_extension(directory_path: str, extension: str, include_subdir
                 else:
                     subdirectory_file_list.append(os.path.join(root, file))
 
-    return (file_list, subdirectory_file_list)
+    return file_list, subdirectory_file_list
 
 
 def delete_directory(directory_path: str) -> bool:
