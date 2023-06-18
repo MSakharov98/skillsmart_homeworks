@@ -1,44 +1,31 @@
 import unittest
 from salary_table import SynchronizingTables
+class TestSynchronizingTables(unittest.TestCase):
 
+    def test_synchronizing_tables(self):
+        N = 4
+        ids = [10, 67, 68, 28]
+        salary = [55, 73, 10, 6]
+        expected = [6, 55, 73, 10]
+        result = SynchronizingTables(N, ids, salary)
+        self.assertEqual(result, expected)
 
-class MyTestCase(unittest.TestCase):
+    def test_synchronizing_tables_empty(self):
+        N = 0
+        ids = []
+        salary = []
+        expected = []
+        result = SynchronizingTables(N, ids, salary)
+        self.assertEqual(result, expected)
 
-    class TestSynchronizingTables(unittest.TestCase):
+    def test_synchronizing_tables_duplicates(self):
+        N = 5
+        ids = [1, 2, 3, 4, 5]
+        salary = [100, 200, 200, 100, 300]
+        expected = [100, 100, 200, 200, 300]
+        result = SynchronizingTables(N, ids, salary)
+        self.assertEqual(result, expected)
 
-        def test_synchronized_salary(self):
-            ids = [50, 1, 1024]
-            salary = [20000, 100000, 90000]
-            expected_result = [90000, 20000, 100000]
-
-            synchronized_salary = SynchronizingTables(len(ids), ids, salary)
-            self.assertEqual(synchronized_salary, expected_result)
-
-        def test_empty_lists(self):
-            ids = []
-            salary = []
-            expected_result = []
-
-            synchronized_salary = SynchronizingTables(len(ids), ids, salary)
-            self.assertEqual(synchronized_salary, expected_result)
-
-        def test_duplicate_salaries(self):
-            ids = [1, 2, 3]
-            salary = [10000, 20000, 10000]
-            expected_result = [10000, 20000, 10000]
-
-            synchronized_salary = SynchronizingTables(len(ids), ids, salary)
-            self.assertEqual(synchronized_salary, expected_result)
-
-        def test_unordered_ids(self):
-            ids = [3, 2, 1]
-            salary = [10000, 20000, 30000]
-            expected_result = [30000, 20000, 10000]
-
-            synchronized_salary = SynchronizingTables(len(ids), ids, salary)
-            self.assertEqual(synchronized_salary, expected_result)
-
-    if __name__ == '__main__':
-        unittest.main()
-
+if __name__ == '__main__':
+    unittest.main()
 
