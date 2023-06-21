@@ -1,21 +1,39 @@
 def PatternUnlock(N, hits):
-    diagonal_points = [2, 4, 6, 8]
-    length = 0
-    previous_point = hits[0]
+    unlock_code = ""
+    total_length = 0
 
     for i in range(1, N):
-        current_point = hits[i]
+        distance = 0
 
-        if (previous_point in diagonal_points and current_point in diagonal_points) or \
-                (previous_point not in diagonal_points and current_point not in diagonal_points):
-            length += 1
+        if hits[i] in [2, 9]:
+            distance = 1
         else:
-            length += 1.41421
+            if (hits[i] == 1 and hits[i-1] in [2, 4, 5]):
+                distance = 1
+            elif (hits[i] == 2 and hits[i-1] in [1, 3, 4, 5, 6]):
+                distance = 1
+            elif (hits[i] == 3 and hits[i-1] in [2, 5, 6]):
+                distance = 1
+            elif (hits[i] == 4 and hits[i-1] in [1, 2, 5, 7]):
+                distance = 1
+            elif (hits[i] == 5 and hits[i-1] in [1, 2, 3, 4, 6, 7, 8, 9]):
+                distance = 1
+            elif (hits[i] == 6 and hits[i-1] in [2, 3, 5, 8, 9]):
+                distance = 1
+            elif (hits[i] == 7 and hits[i-1] in [4, 5, 8]):
+                distance = 1
+            elif (hits[i] == 8 and hits[i-1] in [5, 6, 7, 9]):
+                distance = 1
+            elif (hits[i] == 9 and hits[i-1] in [6, 8]):
+                distance = 1
 
-        previous_point = current_point
+        total_length += distance
 
-    rounded_length = round(length, 5)
+    length_str = str(total_length)
 
-    result = str(rounded_length).replace(".", "")
+    for char in length_str:
+        if char != '0':
+            unlock_code += char
 
-    return result
+    return unlock_code
+

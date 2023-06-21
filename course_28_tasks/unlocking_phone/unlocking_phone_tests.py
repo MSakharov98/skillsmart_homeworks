@@ -1,33 +1,34 @@
 import unittest
 from unlocking_phone import PatternUnlock
+def test_PatternUnlock():
+    # Тест 1: Проверка для примера из условия задачи
+    N = 10
+    hits = [1, 2, 3, 4, 5, 6, 2, 7, 8, 9]
+    assert PatternUnlock(N, hits) == '982843'
+
+    # Тест 2: Проверка для случая с одним шагом
+    N = 2
+    hits = [3, 5]
+    assert PatternUnlock(N, hits) == '2'
+
+    # Тест 3: Проверка для случая с переходом на диагональные точки
+    N = 3
+    hits = [1, 5, 9]
+    assert PatternUnlock(N, hits) == '314'
+
+    # Тест 4: Проверка для случая с длиной кода разблокировки равной 1
+    N = 1
+    hits = [4]
+    assert PatternUnlock(N, hits) == '0'
+
+    # Тест 5: Проверка для случая с кодом разблокировки [2, 1, 9]
+    N = 3
+    hits = [2, 1, 9]
+    assert PatternUnlock(N, hits) == '2'
+
+    print("Все тесты пройдены успешно.")
 
 
-class PatternUnlockTests(unittest.TestCase):
-    def test_example_input(self):
-        hits = [6, 9, 8, 5, 1, 0, 4, 7, 2, 3]
-        result = PatternUnlock(10, hits)
-        self.assertEqual(result, "1189947")
+# Запуск unit-тестов
+test_PatternUnlock()
 
-    def test_zero_distance(self):
-        hits = [0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0]
-        result = PatternUnlock(11, hits)
-        self.assertEqual(result, "10")
-
-    def test_horizontal_vertical_distance(self):
-        hits = [1, 2, 3, 2, 1, 2]
-        result = PatternUnlock(6, hits)
-        self.assertEqual(result, "707105")
-
-    def test_diagonal_distance(self):
-        hits = [5, 2, 7, 8, 4]
-        result = PatternUnlock(5, hits)
-        self.assertEqual(result, "524263")
-
-    def test_rounding(self):
-        hits = [2, 2, 2, 2]
-        result = PatternUnlock(4, hits)
-        self.assertEqual(result, "3")
-
-
-if __name__ == '__main__':
-    unittest.main()
