@@ -1,39 +1,37 @@
 def PatternUnlock(N, hits):
-    unlock_code = ""
-    total_length = 0
-
-    for i in range(1, N):
-        distance = 0
-
-        if hits[i] in [2, 9]:
-            distance = 1
+    def distance(x1, y1, x2, y2):
+        dx = abs(x2 - x1)
+        dy = abs(y2 - y1)
+        if dx == 1 and dy == 0:
+            return 1
+        elif dx == 0 and dy == 1:
+            return 1
+        elif dx == 1 and dy == 1:
+            return 1.41421
+        elif dx == 2 and dy == 0:
+            return 2
+        elif dx == 0 and dy == 2:
+            return 2
+        elif dx == 2 and dy == 1:
+            return 2.23607
+        elif dx == 1 and dy == 2:
+            return 2.23607
         else:
-            if (hits[i] == 1 and hits[i-1] in [2, 4, 5]):
-                distance = 1
-            elif (hits[i] == 2 and hits[i-1] in [1, 3, 4, 5, 6]):
-                distance = 1
-            elif (hits[i] == 3 and hits[i-1] in [2, 5, 6]):
-                distance = 1
-            elif (hits[i] == 4 and hits[i-1] in [1, 2, 5, 7]):
-                distance = 1
-            elif (hits[i] == 5 and hits[i-1] in [1, 2, 3, 4, 6, 7, 8, 9]):
-                distance = 1
-            elif (hits[i] == 6 and hits[i-1] in [2, 3, 5, 8, 9]):
-                distance = 1
-            elif (hits[i] == 7 and hits[i-1] in [4, 5, 8]):
-                distance = 1
-            elif (hits[i] == 8 and hits[i-1] in [5, 6, 7, 9]):
-                distance = 1
-            elif (hits[i] == 9 and hits[i-1] in [6, 8]):
-                distance = 1
+            return ((dx ** 2 + dy ** 2) ** 0.5)
 
-        total_length += distance
+    coords = {
+        1: (0, 1), 2: (1, 1), 3: (2, 1),
+        4: (0, 2), 5: (1, 2), 6: (2, 2),
+        7: (0, 3), 8: (1, 3), 9: (2, 3)
+    }
 
-    length_str = str(total_length)
+    length = 0
+    for i in range(N - 1):
+        x1, y1 = coords[hits[i]]
+        x2, y2 = coords[hits[i + 1]]
+        length += distance(x1, y1, x2, y2)
 
-    for char in length_str:
-        if char != '0':
-            unlock_code += char
+    result = '{:.5f}'.format(length).rstrip('0').replace('.', '')
 
-    return unlock_code
+    return result
 
