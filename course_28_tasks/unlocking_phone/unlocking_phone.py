@@ -34,4 +34,3 @@ def PatternUnlock(N, hits):
     result = '{:.5f}'.format(length).rstrip('0').replace('.', '')
 
     return result
-
