@@ -1,36 +1,41 @@
 def PatternUnlock(N, hits):
-    def distance(x1, y1, x2, y2):
-        dx = abs(x2 - x1)
-        dy = abs(y2 - y1)
-        if dx == 1 and dy == 0:
-            return 1
-        elif dx == 0 and dy == 1:
-            return 1
-        elif dx == 1 and dy == 1:
-            return 1.41421
-        elif dx == 2 and dy == 0:
-            return 2
-        elif dx == 0 and dy == 2:
-            return 2
-        elif dx == 2 and dy == 1:
-            return 2.23607
-        elif dx == 1 and dy == 2:
-            return 2.23607
-        else:
-            return ((dx ** 2 + dy ** 2) ** 0.5)
+    straight = 1
+    diagonal = 2 ** (1 / 2)
+    keyboard = [[6, 1, 9], [5, 2, 8], [4, 3, 7]]
+    sequence = []
 
-    coords = {
-        1: (0, 1), 2: (1, 1), 3: (2, 1),
-        4: (0, 2), 5: (1, 2), 6: (2, 2),
-        7: (0, 3), 8: (1, 3), 9: (2, 3)
-    }
+    for hit in range(len(hits)):
+        if hits[hit] == hits[-1]:
+            break
+        for row in range(len(keyboard)):
+            for column in range(len(keyboard[row])):
+                if hits[hit] == keyboard[row][column]:
 
-    length = 0
-    for i in range(N - 1):
-        x1, y1 = coords[hits[i]]
-        x2, y2 = coords[hits[i + 1]]
-        length += distance(x1, y1, x2, y2)
+                    if 0 <= row - 1 <= 2 and keyboard[row - 1][column] == hits[hit + 1]:
+                        sequence.append(straight)
+                    if 0 <= row + 1 <= 2 and keyboard[row + 1][column] == hits[hit + 1]:
+                        sequence.append(straight)
+                    if 0 <= column - 1 <= 2 and keyboard[row][column - 1] == hits[hit + 1]:
+                        sequence.append(straight)
+                    if 0 <= column + 1 <= 2 and keyboard[row][column + 1] == hits[hit + 1]:
+                        sequence.append(straight)
 
-    result = '{:.5f}'.format(length).rstrip('0').replace('.', '')
+                    if 0 <= row + 1 <= 2 and 0 <= column + 1 <= 2 and keyboard[row + 1][column + 1] == hits[hit + 1]:
+                        sequence.append(diagonal)
+                    if 0 <= row + 1 <= 2 and 0 <= column - 1 <= 2 and keyboard[row + 1][column - 1] == hits[hit + 1]:
+                        sequence.append(diagonal)
+                    if 0 <= row - 1 <= 2 and 0 <= column - 1 <= 2 and keyboard[row - 1][column - 1] == hits[hit + 1]:
+                        sequence.append(diagonal)
+                    if 0 <= row - 1 <= 2 and 0 <= column + 1 <= 2 and keyboard[row - 1][column + 1] == hits[hit + 1]:
+                        sequence.append(diagonal)
+
+    summ = sum(sequence)
+
+    summ = float('{:.5f}'.format(summ))
+
+    summ = str(summ)
+
+    result_without_zero = summ.replace('0', '')
+    result = result_without_zero.replace('.', '')
 
     return result
