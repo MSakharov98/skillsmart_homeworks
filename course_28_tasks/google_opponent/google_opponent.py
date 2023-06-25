@@ -1,37 +1,31 @@
 def WordSearch(length, s, subs):
     result = []
     words = s.split()
-    lines = []
-    current_line = ""
 
     if len(words) == 1 and len(words[0]) > length:
-        current_line = words[0]
-
-        while len(current_line) > length:
-            lines.append(current_line[:length])
-            current_line = current_line[length:]
-        lines.append(current_line)
+        # Обработка случая, когда строка без пробелов превышает длину length
+        line = words[0]
+        while len(line) > length:
+            result.append(int(subs == line[:length]))
+            line = line[length:]
+        result.append(int(subs == line))
 
     else:
+        # Разбиение строки на подстроки длиной length
+        lines = []
+        line = ""
+
         for word in words:
-            if len(current_line + word) <= length:
-                current_line += word + " "
+            if len(line) + len(word) <= length:
+                line += word + " "
             else:
-                lines.append(current_line.strip())
-                current_line = word + " "
+                lines.append(line.strip())
+                line = word + " "
 
-        if current_line:
-            lines.append(current_line.strip())
+        if line:
+            lines.append(line.strip())
 
-    for line in lines:
-        words_in_line = line.split()
-        found = False
-
-        for word in words_in_line:
-            if word == subs:
-                found = True
-                break
-
-        result.append(int(found))
+        # Поиск вхождений subs в каждую подстроку
+        result = [int(subs in line.split()) for line in lines]
 
     return result
