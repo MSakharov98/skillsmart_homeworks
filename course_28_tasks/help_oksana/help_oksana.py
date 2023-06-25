@@ -6,5 +6,3 @@ def SumOfThe(N, data):
             return data[i]
 
     return None
-
-
