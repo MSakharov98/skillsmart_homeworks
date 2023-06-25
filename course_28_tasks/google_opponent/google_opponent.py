@@ -5,10 +5,7 @@ def WordSearch(length, s, subs):
     if len(words) == 1 and len(words[0]) > length:
         # Обработка случая, когда строка без пробелов превышает длину length
         line = words[0]
-        while len(line) > length:
-            result.append(int(subs == line[:length]))
-            line = line[length:]
-        result.append(int(subs == line))
+        result.extend(int(subs == line[i:i + length]) for i in range(0, len(line), length))
 
     else:
         # Разбиение строки на подстроки длиной length
