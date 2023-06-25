@@ -2,7 +2,15 @@ import unittest
 from google_opponent import WordSearch
 
 class MyTestCase(unittest.TestCase):
-    def test_word_search_study_case(self):
+    def test_word_search_study_case_1(self):
+        length = 3
+        text = "12345"
+        word = "123"
+        expected = [1, 0]
+        result = WordSearch(length, text, word)
+        self.assertEqual(result, expected)
+
+    def test_word_search_study_case_2(self):
         length = 12
         text = " строка разбивается на набор строк через выравнивание по заданной ширине."
         word = "строк"

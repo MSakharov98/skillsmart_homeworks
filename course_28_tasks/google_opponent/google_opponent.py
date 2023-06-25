@@ -4,15 +4,24 @@ def WordSearch(length, s, subs):
     lines = []
     current_line = ""
 
-    for word in words:
-        if len(current_line + word) <= length:
-            current_line += word + " "
-        else:
-            lines.append(current_line.strip())
-            current_line = word + " "
+    if len(words) == 1 and len(words[0]) > length:
+        current_line = words[0]
 
-    if current_line:
-        lines.append(current_line.strip())
+        while len(current_line) > length:
+            lines.append(current_line[:length])
+            current_line = current_line[length:]
+        lines.append(current_line)
+
+    else:
+        for word in words:
+            if len(current_line + word) <= length:
+                current_line += word + " "
+            else:
+                lines.append(current_line.strip())
+                current_line = word + " "
+
+        if current_line:
+            lines.append(current_line.strip())
 
     for line in lines:
         words_in_line = line.split()
