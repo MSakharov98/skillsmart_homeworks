@@ -1,4 +1,4 @@
-def TheRabbitFoot(s, encode):
+def TheRabbitsFoot(s, encode):
     if encode:
         s = s.replace(' ', '')
         rows = int(len(s)**(1/2) // 1)
