@@ -5,13 +5,16 @@ def Unmanned(L, N, track):
     for i in range(N):
         light_time, red_time, green_time = track[i]
         distance = light_time - current_time
-        total_time += distance
 
-        cycles = total_time // (red_time + green_time)
-        remainder = total_time % (red_time + green_time)
+        if distance > 0:
+            total_time += distance
 
-        if remainder <= red_time:
-            total_time += red_time - remainder
+        if total_time < L:
+            cycles = (total_time + red_time) // (red_time + green_time)
+            remainder = total_time % (red_time + green_time)
+
+            if remainder < red_time:
+                total_time += red_time - remainder
 
         current_time = light_time
 
