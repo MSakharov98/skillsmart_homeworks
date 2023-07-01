@@ -26,19 +26,3 @@ def LineAnalysis(line):
         return True
     else:
         return False
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
