@@ -1,20 +1,44 @@
 def LineAnalysis(line):
 
-    if line[0] != '*' or line[-1] != '*':
+    if not line:
         return False
 
-    for char in line[1:-1]:
-        if char != '.' and char != '*':
-            return False
-
-    if line.count('*') != 2:
+    n = len(line)
+    if line[0] != '*' or line[n-1] != '*':
         return False
 
-    prefix = line.split('*')[0]
-    suffix = line.split('*')[-1]
-    pattern = line.strip('*')
+    pattern = ''
+    count = 0
 
-    if prefix != pattern or suffix != pattern:
+    for i in range(1, n-1):
+        if line[i] == '.':
+            count += 1
+        elif line[i] == '*':
+            if pattern == '':
+                pattern = line[i-1] * count
+            elif line[i-1] * count != pattern and pattern != '*.*':
+                return False
+            count = 0
+
+    if pattern == '' or line == '*' * n or line.count('*') == n:
+        return True
+    elif pattern == '*' or pattern == line[-2] * count or pattern == '*' * count or line.count('*') == n-2 or line.count('*') == 1 or line.count('.') == 0:
+        return True
+    else:
         return False
 
-    return True
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
