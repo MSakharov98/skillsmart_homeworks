@@ -1,9 +1,17 @@
 def MisterRobot(N, data):
-    if N <= 4:
-        return False
 
-    first_element = data[0]
-    last_element = data[-1]
-    sum_first_last = first_element + last_element
+    sorted_data = sorted(data)
 
-    return sum_first_last % 2 == 0 and first_element < last_element
+    if sorted_data == list(range(1, N+1)):
+        return True
+
+    for _ in range(N):
+        for i in range(N-2):
+            triplet = sorted_data[i:i+3]
+            triplet = triplet[1:] + [triplet[0]]
+            sorted_data[i:i+3] = triplet
+
+            if sorted_data == list(range(1, N+1)):
+                return True
+
+    return False
