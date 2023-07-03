@@ -15,6 +15,3 @@ def MisterRobot(N, data):
         right += 1
 
     return True
-
-
-
