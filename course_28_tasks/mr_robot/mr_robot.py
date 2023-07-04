@@ -1,17 +1,11 @@
 def MisterRobot(N, data):
-    sorted_data = sorted(data)
 
-    if N < 4 or sorted_data != list(range(1, N+1)):
+    if N < 4 or set(data) != set(range(1, N + 1)):
         return False
 
-    left = 0
-    right = 2
-
-    while right < N:
-        triplet = sorted_data[left:right+1]
+    for i in range(N - 2):
+        triplet = data[i:i+3]
         if triplet[0] > triplet[1] and triplet[1] > triplet[2]:
             return False
-        left += 1
-        right += 1
 
     return True
