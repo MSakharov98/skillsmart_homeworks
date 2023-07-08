@@ -1,57 +1,68 @@
-current_string = ""
-string_changes = []
-current_position = -1
+cur_line = ''
+undo_massive = [cur_line]
+redo_massive = []
+last_action = 0
 
 def BastShoe(command):
-    global current_string, string_changes, current_position
+    global cur_line
+    global undo_massive
+    global redo_massive
+    global last_action
+    command = list(command)
 
-    parts = command.split()
-    if len(parts) == 0:
-        return current_string
+    if int(command[0]) < 1 or int(command[0]) > 5:
+        return cur_line
 
-    operation = int(parts[0])
+    if command[0] == '1' or command[0] == '2':
+        if last_action == 4 or last_action == 5:
+            undo_massive = [cur_line]
+            redo_massive = []
+        cur_line = list(cur_line)
+        last_action = 12
+        if command[0] == '1':
+            command.pop(0)
+            command.pop(0)
+            for i in range(len(command)):
+                cur_line.append(command[i])
+        else:
+            command.pop(0)
+            command.pop(0)
+            command = ''.join(command)
+            command = int(command)
+            if command >= len(cur_line):
+                cur_line = ''
+            else:
+                for i in range(command):
+                    cur_line.pop(len(cur_line)-1)
+        cur_line = ''.join(cur_line)
+        undo_massive.append(cur_line)
+        return cur_line
 
-    if operation == 1:
-        if len(parts) < 2:
-            return current_string
+    if command[0] == '3':
+        cur_line = list(cur_line)
+        command.pop(0)
+        command.pop(0)
+        command = ''.join(command)
+        command = int(command)
+        if len(cur_line)-1 < command:
+            return ''
+        return cur_line[command]
 
-        string_changes = string_changes[:current_position + 1]
-        current_string += " ".join(parts[1:])
-        string_changes.append(current_string)
-        current_position += 1
-        return current_string
+    if command[0] == '4':
+        last_action = 4
+        if undo_massive is [] or len(undo_massive) == 1:
+            return cur_line
+        redo_massive.append(undo_massive[len(undo_massive)-1])
+        cur_line = undo_massive[len(undo_massive)-2]
+        undo_massive.pop(len(undo_massive)-1)
+        return cur_line
 
-    if operation == 2:
-        if len(parts) < 2:
-            return current_string
-
-        string_changes = string_changes[:current_position + 1]
-        num_chars = int(parts[1])
-        current_string = current_string[:-num_chars]
-        string_changes.append(current_string)
-        current_position += 1
-        return current_string
-
-    if operation == 3:
-        if len(parts) < 2:
-            return ""
-
-        index = int(parts[1])
-        if index < 0 or index >= len(current_string):
-            return ""
-
-        return current_string[index]
-
-    if operation == 4:
-        if current_position > 0:
-            current_position -= 1
-            current_string = string_changes[current_position]
-        return current_string
-
-    if operation == 5:
-        if current_position < len(string_changes) - 1:
-            current_position += 1
-            current_string = string_changes[current_position]
-        return current_string
-
-    return ""
+    if command[0] == '5':
+        if last_action == 12 or len(redo_massive) == 0:
+            return cur_line
+        else:
+            last_action = 5
+            undo_massive.append(redo_massive[len(redo_massive)-1])
+            cur_line = redo_massive[len(redo_massive)-1]
+            redo_massive.pop(len(redo_massive)-1)
+            return cur_line
