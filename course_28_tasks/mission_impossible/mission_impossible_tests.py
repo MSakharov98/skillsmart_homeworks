@@ -1,63 +1,51 @@
 import unittest
-from mission_impossible import TheRabbitFoot
 
-class MyTestCase(unittest.TestCase):
-        def test_encode(self):
-            # Тестовая строка
-            input_string = "Hello, world!"
-            expected_output = "Horel ollewd!"
-
-            # Вызов функции для шифрования
-            encoded_string = TheRabbitFoot(input_string, encode=True)
-
-            # Проверка результата
-            self.assertEqual(encoded_string, expected_output)
-
-        def test_decode(self):
-            # Закодированная строка
-            input_string = "Horel ollewd!"
-            expected_output = "Hello, world!"
-
-            # Вызов функции для дешифрования
-            decoded_string = TheRabbitFoot(input_string, encode=False)
-
-            # Проверка результата
-            self.assertEqual(decoded_string, expected_output)
-
-        def test_empty_string(self):
-            # Пустая строка
-            input_string = ""
-            expected_output = ""
-
-            # Вызов функции для шифрования
-            encoded_string = TheRabbitFoot(input_string, encode=True)
-
-            # Проверка результата
-            self.assertEqual(encoded_string, expected_output)
-
-            # Вызов функции для дешифрования
-            decoded_string = TheRabbitFoot(input_string, encode=False)
-
-            # Проверка результата
-            self.assertEqual(decoded_string, expected_output)
-
-        def test_no_spaces(self):
-            # Строка без пробелов
-            input_string = "Hello"
-            expected_output = "Helo"
-
-            # Вызов функции для шифрования
-            encoded_string = TheRabbitFoot(input_string, encode=True)
-
-            # Проверка результата
-            self.assertEqual(encoded_string, expected_output)
-
-            # Вызов функции для дешифрования
-            decoded_string = TheRabbitFoot(input_string, encode=False)
-
-            # Проверка результата
-            self.assertEqual(decoded_string, expected_output)
+from mission_impossible import TheRabbitsFoot
 
 
-if __name__ == '__main__':
+class TestRabbitsFoot(unittest.TestCase):
+    def test_rabbit_foot(self):
+        self.assertEqual(
+            TheRabbitsFoot("отдай мою кроличью лапку", True),
+            "омоюу толл дюиа акчп йрьк"
+        )
+        self.assertEqual(
+            TheRabbitsFoot("омоюу толл дюиа акчп йрьк", False),
+            "отдаймоюкроличьюлапку"
+        )
+
+    def test_encrypt(self):
+        data = [
+            ['отдай мою кроличью лапку', 'омоюу толл дюиа акчп йрьк'],
+            ['', ''],
+            [' ', ''],
+            [' ф', 'ф'],
+            ['аб', 'а б'],
+            ['абв', 'ав б'],
+            ['а б в   г', 'ав бг'],
+            ['шифрование это просто', 'швэо иатс фнот рипо оер'],
+        ]
+
+        for i in range(len(data)):
+            dataset = data[i]
+            self.assertEqual(TheRabbitsFoot(dataset[0], True), dataset[1])
+
+    def test_decrypt(self):
+        data = [
+            ['омоюу толл дюиа акчп йрьк', 'отдаймоюкроличьюлапку'],
+            ['', ''],
+            [' ', ''],
+            ['ф', 'ф'],
+            ['а б', 'аб'],
+            ['ав б', 'абв'],
+            ['ав бг', 'абвг'],
+            ['швэо иатс фнот  рипо оер', 'шифрованиеэтопросто'],
+        ]
+
+        for i in range(len(data)):
+            dataset = data[i]
+            self.assertEqual(TheRabbitsFoot(dataset[0], False), dataset[1])
+
+
+if __name__ == "__main__":
     unittest.main()
