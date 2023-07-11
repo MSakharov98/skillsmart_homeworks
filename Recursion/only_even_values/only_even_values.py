@@ -16,9 +16,3 @@ def only_even_values(l: list) -> list:
 
     return even_values
 
-
-
-
-
-
-
