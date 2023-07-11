@@ -10,5 +10,3 @@ def length_of_list(l: list) -> int:
     l.pop(0)
 
     return 1 + length_of_list(l)
-
-
