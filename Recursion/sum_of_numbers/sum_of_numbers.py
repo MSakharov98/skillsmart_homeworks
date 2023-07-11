@@ -1,8 +1,8 @@
 def sum_of_numbers(N: int) -> int:
 
     '''
-    параметр N: число, для которого находим сумму цифр
-    функция возвращает сумму цифр числа N
+    :param N: integer, of which we find the sum of numbers
+    function returns sum of numbers of N
     '''
 
     if N == 0:
@@ -12,5 +12,3 @@ def sum_of_numbers(N: int) -> int:
         N = -N
 
     return sum_of_numbers(N // 10) + (N % 10)
-
-
