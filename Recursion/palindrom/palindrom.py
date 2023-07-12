@@ -7,5 +7,8 @@ def is_palindrom(string: str) -> bool:
     if len(string) <= 1:
         return True
 
-    return string[0] == string[-1] and is_palindrom(string[1:-1])
+    if string[0] != string[-1]:
+        return False
+
+    return is_palindrom(string[1:-1])
 
