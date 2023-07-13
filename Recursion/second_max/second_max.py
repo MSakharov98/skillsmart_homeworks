@@ -1,19 +1,15 @@
-def find_max(arr):
+def find_max(arr, N):
     if not arr:
         return None
 
-    if len(arr) == 1:
+    if N == 1:
         return arr[0]
 
-    return max(arr[0], find_max(arr[1:]))
+    return max(arr[N - 1], find_max(arr, N - 1))
 
-def find_second_max(arr):
+def find_second_max(arr, N):
 
     if not arr:
         return None
 
-    max_value = find_max(arr)
-    arr.remove(max_value)
-
-    return find_max(arr)
-
+    return find_max(arr, N - 1)
