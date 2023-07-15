@@ -15,8 +15,8 @@ def find_second_max(x):
     if not x:
         return None
 
-    first_max = x[0]
-    second_max = x[1]
+    first_max = max(x[0], x[1])
+    second_max = min(x[0], x[1])
 
     second_max = find_second_max_recursive(x, 0, first_max, second_max)
 
