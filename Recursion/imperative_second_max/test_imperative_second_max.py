@@ -9,7 +9,7 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(find_second_max([1, 2, 3, 4, 5, 5]), 5)
 
     def test_empty_array(self):
-        self.assertEqual(find_second_max([]), [])
+        self.assertEqual(find_second_max([]), None)
 
 
 if __name__ == '__main__':
