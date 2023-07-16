@@ -12,6 +12,7 @@ def find_second_max_recursive(x, i, first_max, second_max):
 
 
 def find_second_max(x):
+
     if not x:
         return None
 
