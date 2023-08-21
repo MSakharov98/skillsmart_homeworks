@@ -51,6 +51,6 @@ class DynArray:
         self.array[self.count - 1] = None
         self.count -= 1
 
-        if self.count < self.capacity // 2 and self.capacity // 1.5 >= 16:
+        if self.count < self.capacity // 2 and self.capacity // 2 >= 16:
             new_capacity = max(self.capacity // 1.5, 16)
             self.resize(new_capacity)
