@@ -1,6 +1,4 @@
 import ctypes
-
-
 class DynArray:
 
     def __init__(self):
@@ -35,15 +33,13 @@ class DynArray:
     def insert(self, i, itm):
         if i < 0 or i > self.count:
             raise IndexError('Index is out of bounds')
-        if i == self.count:
-            self.append(itm)
-            return
 
         if self.count == self.capacity:
             self.resize(2 * self.capacity)
 
         for j in range(self.count, i, -1):
             self.array[j] = self.array[j - 1]
+
         self.array[i] = itm
         self.count += 1
 
@@ -53,9 +49,10 @@ class DynArray:
 
         for j in range(i, self.count - 1):
             self.array[j] = self.array[j + 1]
+
         self.array[self.count - 1] = None
         self.count -= 1
 
-        if self.count < self.capacity // 2 and self.capacity // 2 >= 16:
-            new_capacity = max(self.capacity // 1.5, 16)
+        if self.count < self.capacity // 2:
+            new_capacity = max(self.capacity // 2, 16)
             self.resize(new_capacity)
