@@ -1,4 +1,5 @@
 import ctypes
+
 class DynArray:
 
     def __init__(self):
@@ -12,7 +13,7 @@ class DynArray:
     def make_array(self, new_capacity):
         return (new_capacity * ctypes.py_object)()
 
-    def __getitem__(self, i):
+    def __getitem__(self,i):
         if i < 0 or i >= self.count:
             raise IndexError('Index is out of bounds')
         return self.array[i]
@@ -26,33 +27,34 @@ class DynArray:
 
     def append(self, itm):
         if self.count == self.capacity:
-            self.resize(2 * self.capacity)
+            self.resize(2*self.capacity)
         self.array[self.count] = itm
         self.count += 1
 
     def insert(self, i, itm):
-        if i < 0 or i > self.count:
+        if i > self.count or i < 0:
             raise IndexError('Index is out of bounds')
+        elif i == self.count:
+            self.append(itm)
+        else:
+            if self.count == self.capacity:
+                self.resize(2*self.capacity)
+            for j in range(self.count - 1, i - 1, -1):
+                self.array[j+1] = self.array[j]
+            self.array[i] = itm
+            self.count += 1
 
-        if self.count == self.capacity:
-            self.resize(2 * self.capacity)
-
-        for j in range(self.count, i, -1):
-            self.array[j] = self.array[j - 1]
-
-        self.array[i] = itm
-        self.count += 1
 
     def delete(self, i):
-        if i < 0 or i >= self.count:
+        if i >= self.count or i < 0:
             raise IndexError('Index is out of bounds')
+        else:
+            for j in range(i, self.count - 1):
+                self.array[j] = self.array[j+1]
 
-        for j in range(i, self.count - 1):
-            self.array[j] = self.array[j + 1]
-
-        self.array[self.count - 1] = None
-        self.count -= 1
-
-        if self.count < self.capacity // 2:
-            new_capacity = max(self.capacity // 2, 16)
-            self.resize(new_capacity)
+            self.array[self.count - 1] = None
+            self.count = self.count - 1
+            if self.count <= self.capacity // 2 and self.count > 16:
+                self.resize(int(self.capacity // 1.5))
+            elif self.count <= 16:
+                self.resize(16)
