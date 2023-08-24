@@ -47,6 +47,28 @@ class TestDynArray(unittest.TestCase):
         self.assertEqual(data.count, 16)
         self.assertEqual(data.capacity, 21)
 
+    def test_study_case(self):
+        data = create_array_to_test(1048)
+        self.assertEqual(len(data), 1048)
+        self.assertEqual(data.capacity, 16)
+
+        for i in range(1000, 1048):
+            data.insert(i, i * 2)
+
+        self.assertEqual(len(data), 1048 + 48)
+        self.assertEqual(data.capacity, 2048)
+
+        for i in range(1000, 1000 + 48):
+            data.delete(i * 2)
+
+        self.assertEqual(len(data), 46)
+        self.assertEqual(data.capacity, 2048)
+
+        expected_elements = [i for i in range(1000)] + [i for i in range(1048, 1096)]
+
+        for i in range(len(data)):
+            self.assertEqual(data[i], expected_elements[i])
+
 
 if __name__ == '__main__':
     unittest.main()
