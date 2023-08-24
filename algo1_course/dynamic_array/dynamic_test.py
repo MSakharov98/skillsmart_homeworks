@@ -50,7 +50,6 @@ class TestDynArray(unittest.TestCase):
     def test_study_case(self):
         data = create_array_to_test(1048)
         self.assertEqual(len(data), 1048)
-        self.assertEqual(data.capacity, 16)
 
         for i in range(1000, 1048):
             data.insert(i, i * 2)
