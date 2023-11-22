@@ -5,7 +5,7 @@ class MassVoteTestCase(unittest.TestCase):
     def test_majority_winner(self):
         N = 5
         Votes = [10, 20, 30, 40, 50]
-        self.assertEqual(MassVote(N, Votes), "majority winner 5")
+        self.assertEqual(MassVote(N, Votes), "minority winner 5")
 
     def test_minority_winner(self):
         N = 4
