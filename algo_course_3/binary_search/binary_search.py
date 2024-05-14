@@ -1,30 +1,46 @@
 class BinarySearch:
+    def __init__(self, sorted_numbers: list[int]):
+        self.Numbers = sorted_numbers
+        self.Left = 0
+        self.Right = len(sorted_numbers) - 1
+        self.Status = 0
 
-    def __init__(self, array):
-        self.Array = array
-        self.Left_index = 0
-        self.Right_index = len(array) - 1
-        self.Finding_status = 0
+    def Step(self, number: int):
+        if self.Status != 0:
+            return
 
-    def Step(self, Finding_value):
-        if self.Finding_status == 0:
-            middle_index = (self.Left_index + self.Right_index) // 2
-            if self.Left_index > self.Right_index:
-                self.Finding_status = -1
+        middle_i = (self.Left + self.Right) // 2
+        if middle_i > len(self.Numbers) - 1 or middle_i < 0:
+            self.Status = -1
+            return
+
+        if self.Numbers[middle_i] == number:
+            self.Status = 1
+            return
+
+        if self.Numbers[middle_i] < number:
+            self.Left = middle_i + 1
+
+        if self.Numbers[middle_i] > number:
+            self.Right = middle_i - 1
+
+        if self.Left == self.Right:
+            if self.Numbers[self.Left] == number:
+                self.Status = 1
+            if self.Numbers[self.Left] != number:
+                self.Status = -1
+            return
+
+        if abs(self.Right - self.Left) == 1:
+            if self.Numbers[self.Left] == number or self.Numbers[self.Right] == number:
+                self.Status = 1
                 return
-            if Finding_value == self.Array[middle_index]:
-                self.Finding_status = 1
-            elif Finding_value > self.Array[middle_index]:
-                self.Left_index = middle_index + 1
-            else:
-                self.Right_index = middle_index - 1
-            if self.Left_index > self.Right_index:
-                self.Finding_status = -1
-            elif self.Right_index - self.Left_index <= 1:
-                if Finding_value in (self.Array[self.Left_index], self.Array[self.Right_index]):
-                    self.Finding_status = 1
-                    return
-                self.Finding_status = -1
+            self.Status = -1
+            return
 
-    def GetResult(self):
-        return self.Finding_status
+        if self.Left < 0 or self.Right < 0:
+            self.Status = -1
+            return
+
+    def GetResult(self) -> int:
+        return self.Status
