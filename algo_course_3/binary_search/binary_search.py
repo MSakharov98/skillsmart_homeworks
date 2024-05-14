@@ -28,23 +28,3 @@ class BinarySearch:
 
     def GetResult(self):
         return self.Finding_status
-
-
-def GallopingSearch(array, finding_value, start_index=1):
-    current_index = 2 ** start_index - 2
-    if current_index < len(array) - 1:
-        if array[current_index] == finding_value:
-            return True
-        if array[current_index] < finding_value:
-            return GallopingSearch(array, finding_value, start_index + 1)
-    else:
-        current_index = len(array) - 1
-    searcher = BinarySearch(array)
-    searcher.Left_index = 2 ** (start_index - 1) - 1
-    searcher.Right_index = current_index
-    while searcher.Finding_status == 0:
-        searcher.Step(finding_value)
-    if searcher.Finding_status == -1:
-        return False
-    else:
-        return True
