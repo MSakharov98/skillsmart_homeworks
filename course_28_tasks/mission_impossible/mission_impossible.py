@@ -1,20 +1,22 @@
-def TheRabbitsFoot(s, encode):
+from typing import List
+
+def TheRabbitsFoot(s: str, encode: bool) -> str:
     if encode:
         s = s.replace(' ', '')
-        rows = int(len(s)**(1/2) // 1)
-        columns = rows + 1
+        rows: int = int(len(s)**(1/2) // 1)
+        columns: int = rows + 1
 
         if rows * columns < len(s):
             rows += 1
 
-        encrypt = []
+        encrypt: List[List[str]] = []
         while len(s) > columns:
             encrypt.append(list(s[:columns]))
             s = s[columns:]
         else:
             encrypt.append(list(s))
 
-        result = []
+        result: List[str] = []
         for column in range(columns):
             for row in range(rows):
                 if column < len(encrypt[row]):
@@ -24,14 +26,14 @@ def TheRabbitsFoot(s, encode):
 
         return result
     else:
-        sequences = s.split()
+        sequences: List[str] = s.split()
 
-        symbols = []
-        index = 0
+        symbols: List[str] = []
+        index: int = 0
         while True:
             for sequence in sequences:
                 try:
-                    symbol = sequence[index]
+                    symbol: str = sequence[index]
                 except IndexError:
                     return ''.join(symbols)
                 symbols.append(symbol)
