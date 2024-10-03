@@ -1,8 +1,8 @@
-def MassVote(N, Votes):
-    total_votes = sum(Votes)
-    max_votes = max(Votes)
-    max_index = Votes.index(max_votes) + 1
-    percentage = (max_votes / total_votes) * 100
+def MassVote(N: int, Votes: list[int]) -> str:
+    total_votes: int = sum(Votes)
+    max_votes: int = max(Votes)
+    max_index: int = Votes.index(max_votes) + 1
+    percentage: float = (max_votes / total_votes) * 100
 
     if Votes.count(max_votes) > 1:
         return "no winner"
