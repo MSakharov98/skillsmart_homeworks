@@ -16,5 +16,3 @@ def TankRush(H1, W1, S1, H2, W2, S2):
                 return True
 
     return False
-
-print(TankRush(3, 4, '125 683 235', 2, 2, '25 32'))
