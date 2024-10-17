@@ -10,6 +10,3 @@ def transform(nums: list) -> list:
 
 def TransformTransform(nums: list, count_nums: int) -> bool:
     return sum(transform(transform(nums))) % 2 == 0
-
-
-print(TransformTransform([1, 2, 3, 4], ))
