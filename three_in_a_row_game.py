@@ -12,6 +12,10 @@ class Position:
     def __eq__(self, other):
         return self.row == other.row and self.col == other.col
 
+    def __hash__(self):
+        """Делает объект Position хэшируемым для использования в set"""
+        return hash((self.row, self.col))
+
     def __str__(self):
         return f"({self.row}, {self.col})"
 
