@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+<<<<<<< HEAD
       <module fileurl="file://$PROJECT_DIR$/.idea/ooap3.iml" filepath="$PROJECT_DIR$/.idea/ooap3.iml" />
+=======
+      <module fileurl="file://$PROJECT_DIR$/.idea/programming_homeworks.iml" filepath="$PROJECT_DIR$/.idea/programming_homeworks.iml" />
+>>>>>>> f0bd3484e2e580aa35572e2f0e9243588305b0eb
     </modules>
   </component>
 </project>

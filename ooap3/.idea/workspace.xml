@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="babab278-401c-4e4f-8043-617adfa2c57c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/programming_homeworks.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Recursion/balance_of_parenthesis/balance_of_parenthesis.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Recursion/balance_of_parenthesis/test_balance_of_parenthesis.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Recursion/even_indices/even_indices.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Recursion/even_indices/test_even_indices.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Recursion/file_list/file_list.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Recursion/file_list/test_file_list.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Recursion/imperative_second_max/imperative_second_max.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Recursion/imperative_second_max/test_imperative_second_max.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Recursion/length_of_list/length_of_list.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Recursion/length_of_list/test_length_of_list.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Recursion/only_even_values/only_even_values.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Recursion/only_even_values/test_only_even_values.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Recursion/palindrom/palindrom.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Recursion/palindrom/test_palindrome.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Recursion/power/power.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Recursion/power/test_power.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Recursion/second_max/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Recursion/second_max/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Recursion/second_max/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Recursion/second_max/.idea/second_max.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Recursion/second_max/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Recursion/second_max/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Recursion/second_max/second_max.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Recursion/second_max/test_second_max.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Recursion/sum_of_numbers/sum_of_numbers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Recursion/sum_of_numbers/test_sum_of_numbers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/algo1_course/deque/deque.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/algo1_course/dynamic_array/dynamic_array.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/algo1_course/dynamic_array/dynamic_test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/algo1_course/hash_table/hash_table.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/algo1_course/linked_list/linked_list_homework.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/algo1_course/linked_list_2/linked_list_2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/algo1_course/linked_list_2/linked_list_2_dummy.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/algo1_course/ordered_list/ordered_list.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/algo1_course/queue/queue.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/algo1_course/stack/stack.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/algo1_course/stack/test_stack.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/algo1_course_2/bloom_filter/bloom_filter.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/algo1_course_2/bloom_filter/bloom_filter_tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/algo1_course_2/cache/cache.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/algo1_course_2/cache/cache_tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/algo1_course_2/deque.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/algo1_course_2/dictionary.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/algo1_course_2/double_linked_list.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/algo1_course_2/dynamic_array.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/algo1_course_2/hash_table.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/algo1_course_2/linked_list_1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/algo1_course_2/ordered_list.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/algo1_course_2/queue.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/algo1_course_2/set.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/algo1_course_2/stack.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/algo2_course/.idea/algo2_course.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/algo2_course/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/algo2_course/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/algo2_course/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/algo2_course/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/algo2_course/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/algo2_course/aBST.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/algo2_course/binary_search_tree.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/algo2_course/building_balanced_binary_search_tree.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/algo2_course/building_balanced_binary_search_tree_2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/algo2_course/even_trees_and_forests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/algo2_course/heap.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/algo2_course/simple_graph.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/algo2_course/simple_graph_breadth_first_search.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/algo2_course/simple_graph_depth_first_search.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/algo2_course/simple_graph_weak_vertices.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/algo2_course/simple_tree.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/algo2_course/tree_traversal_methods.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/algo_course_3/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/algo_course_3/.idea/algo_course_3.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/algo_course_3/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/algo_course_3/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/algo_course_3/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/algo_course_3/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/algo_course_3/array_chunk/array_chunk.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/algo_course_3/binary_search/binary_search.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/algo_course_3/galloping_search/galloping_search.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/algo_course_3/heap_sort/heap_sort.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/algo_course_3/insertion_sort/insertion_sort.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/algo_course_3/insertion_sort/insertion_sort_tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/algo_course_3/ksort/ksort.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/algo_course_3/kth_order_statistics_step/kth_order_statistics_step.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/algo_course_3/merge_sort/merge_sort.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/algo_course_3/quick_sort/quick_sort.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/algo_course_3/quick_sort/quick_sort_tail_optimization.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/algo_course_3/shell_sort/shell_sort.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/algo_course_3/sorting_base/selection_and_bubble.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/algo_course_3/sorting_base/selection_and_bubble_test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/clean_code/arrays.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/clean_code/bad_comments.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/clean_code/classes_names.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/clean_code/constants.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/clean_code/data_types.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/clean_code/functions-methods_names.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/clean_code/oop_and_interfaces.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/clean_code/right_comments.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/clean_code/variables_and_values.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/clean_code/variables_binding_time.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/clean_code/variables_lifecycle.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/clean_code/variables_names_p1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/clean_code/variables_names_p2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/clean_code/variables_names_p3.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/clean_code/variables_names_p4.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/clean_code/сomments.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_28_tasks/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_28_tasks/.idea/course_28_tasks.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_28_tasks/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_28_tasks/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_28_tasks/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_28_tasks/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_28_tasks/BiggerGreater/BiggerGreater.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_28_tasks/BiggerGreater/BiggerGreater_tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_28_tasks/Football/Football.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_28_tasks/Football/Football_tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_28_tasks/Key_maker/Key_maker.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_28_tasks/Key_maker/Key_maker_tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_28_tasks/MatrixTurn/MatrixTurn.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_28_tasks/MatrixTurn/MatrixTurn_tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_28_tasks/SherlockValidString/SherlockValidString.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_28_tasks/SherlockValidString/SherlockValidString_tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_28_tasks/TransformTransform/TranformTransform.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_28_tasks/TransformTransform/TransfromTransfrom_tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_28_tasks/TreeOfLife/TreeOfLife.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_28_tasks/TreeOfLife/TreeOfLife_tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_28_tasks/google_opponent/google_opponent.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_28_tasks/google_opponent/google_opponent_tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_28_tasks/help_oksana/help_oksana.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_28_tasks/help_oksana/help_oksana_tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_28_tasks/lapti/lapti.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_28_tasks/lapti/lapti_tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_28_tasks/machine_patterns/machine_patterns.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_28_tasks/machine_patterns/machine_patterns_tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_28_tasks/mad_max/mad_max.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_28_tasks/mad_max/mad_max_tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_28_tasks/max_discount/max_discount.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_28_tasks/max_discount/max_discount_tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_28_tasks/mission_impossible/mission_impossible.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_28_tasks/mission_impossible/mission_impossible_tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_28_tasks/mr_anderson/mr_anderson.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_28_tasks/mr_anderson/mr_anderson_tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_28_tasks/mr_robot/mr_robot.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_28_tasks/mr_robot/mr_robot_tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_28_tasks/printing_costs/printing_costs.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_28_tasks/printing_costs/printing_costs_tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_28_tasks/riding_bike/riding_bike.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_28_tasks/riding_bike/riding_bike_tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_28_tasks/salary_table/salary_table.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_28_tasks/salary_table/salary_table_tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_28_tasks/sales_auto/sales_auto.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_28_tasks/sales_auto/sales_auto_tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_28_tasks/soldiers_training/soldiers_training.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_28_tasks/soldiers_training/soldiers_training_test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_28_tasks/squirrel/squirrel.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_28_tasks/squirrel/squirrel_tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_28_tasks/tank_rush/tank_rush.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_28_tasks/tank_rush/tank_rush_tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_28_tasks/traffic_opt/traffic_opt.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_28_tasks/traffic_opt/traffic_opt_tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_28_tasks/ufo_signal/ufo_signal.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_28_tasks/ufo_signal/ufo_signal_tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_28_tasks/unlocking_phone/unlocking_phone.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_28_tasks/unlocking_phone/unlocking_phone_tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_28_tasks/votes_146%/mass_vote.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_28_tasks/votes_146%/mass_vote_tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_28_tasks/white_walkers/white_walkers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_28_tasks/white_walkers/white_walkers_tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_8_tasks/TRC_sort/TRC_sort.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_8_tasks/TRC_sort/test_TRC_sort.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_8_tasks/army_communication/army_communication.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_8_tasks/army_communication/test_army_communication.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_8_tasks/artificial_muscle_fibers/artificial_muscle_fibers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_8_tasks/artificial_muscle_fibers/test_artificial_muscle_fibers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_8_tasks/digital_rain/digital_rain.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_8_tasks/digital_rain/test_digital_rain.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_8_tasks/eec_help/eec_help.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_8_tasks/eec_help/test_eec_help.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_8_tasks/mass_driver/mass_driver.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_8_tasks/mass_driver/test_mass_driver.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_8_tasks/matrix/matrix.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_8_tasks/matrix/test_matrix.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_8_tasks/white_walkers/white_walkers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_8_tasks/white_walkers/white_walkers_tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_py1/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_py1/Tests_QA/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_py1/Tests_QA/my_test_module/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_py1/Tests_QA/my_test_module/bubble_sort.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_py1/Tests_QA/my_test_module/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_py1/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_py1/assert_test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_py1/basis_of_OOP.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_py1/basis_of_OOP_pt2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_py1/classes_and_methods.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_py1/debugging_proccess.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_py1/dictionaries_maps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_py1/files_2_dir/files_2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_py1/files_2_dir/files_2_tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_py1/first.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_py1/first_program.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_py1/images/Added_2_breakpoints.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_py1/images/Breakpoint_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_py1/images/Breakpoint_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_py1/images/Debugging_result.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_py1/images/Midnight_commander_working.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_py1/images/lection_10_programm.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_py1/images/terminal_course_hexlet.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_py1/images/tracker1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_py1/images/tracker2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_py1/images/Скриншот вывода программы.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_py1/lection_16/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_py1/lection_16/test_archive.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_py1/lection_16/test_directory/file1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_py1/lection_16/test_directory/file1.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_py1/lection_16/test_directory/file2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_py1/lection_16/test_directory/file2.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_py1/lection_16/tests_lection_16.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_py1/lection_16/zip_files.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_py1/lection_7.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_py1/lection_8/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_py1/lection_8/.idea/lection_8.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_py1/lection_8/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_py1/lection_8/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_py1/lection_8/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_py1/lection_8/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_py1/lection_8/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_py1/lection_8/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_py1/lection_8/my_math/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_py1/lection_8/my_math/operations.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_py1/lection_8/myprogram/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_py1/lection_8/myprogram/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_py1/linux_test.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_py1/studying_classes.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_py1/test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_py1/test_drawing.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ooap1/bloom_filter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ooap1/bounded_stack.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ooap1/dynamic_array.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ooap1/linked_list.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ooap1/native_divt.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ooap1/parent_queue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ooap1/power_set.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ooap1/queue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ooap1/reflection.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ooap2/task1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ooap2/task10.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ooap2/task11.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ooap2/task12.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ooap2/task13.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ooap2/task14.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ooap2/task15.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ooap2/task16.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ooap2/task17.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ooap2/task18.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ooap2/task19.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ooap2/task2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ooap2/task20.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ooap2/task21.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ooap2/task22.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ooap2/task23.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ooap2/task24.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ooap2/task3.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ooap2/task4.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ooap2/task5.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ooap2/task6.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ooap2/task7.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ooap2/task8.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ooap2/task9.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study_django/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study_django/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study_django/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study_django/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study_django/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study_django/.idea/study_django.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study_django/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study_django/portfolio/db.sqlite3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study_django/portfolio/manage.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study_django/portfolio/portfolio/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study_django/portfolio/portfolio/asgi.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study_django/portfolio/portfolio/settings.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study_django/portfolio/portfolio/static/writer/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study_django/portfolio/portfolio/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study_django/portfolio/portfolio/wsgi.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study_django/portfolio/writer/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study_django/portfolio/writer/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study_django/portfolio/writer/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study_django/portfolio/writer/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study_django/portfolio/writer/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study_django/portfolio/writer/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study_django/portfolio/writer/templates/writer/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study_django/portfolio/writer/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study_django/portfolio/writer/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study_django/portfolio/writer/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study_django/requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="32kayWN5UYt5nI565F6MsTMp76G" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/screenshots" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/venv" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="babab278-401c-4e4f-8043-617adfa2c57c" name="Changes" comment="" />
+      <created>1757967279319</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1757967279319</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
